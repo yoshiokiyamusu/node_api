@@ -5,6 +5,8 @@ const app = express();
 // Settings
 app.set('port', process.env.PORT || 3001);
 
+
+
 // Middlewares
 app.use(express.json());
 
@@ -20,6 +22,7 @@ app.use(function(req, res, next) {
 
 // Routes
 app.use(require('./routes/employees'));
+
 
 // Starting the server
 app.listen(app.get('port'), () => {
